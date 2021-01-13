@@ -1,0 +1,16 @@
+
+.bgImage{
+    background-image: url("./loginbackground.jpg");
+    height: 100vh;
+    width: auto;
+}
+
+.centerArea{
+
+    padding: 100px 50px;
+}
+
+.loginModal{
+    padding: 50px ;
+    background: #fff;
+}
