@@ -1,3 +1,9 @@
+.content-font-colore{
+    font-size: large;
+    font-weight: 500;
+    color: chocolate;
+}
+
 .bgImage{
     background-image: url("./loginbackground.jpg");
     height: 100vh;
@@ -16,6 +22,7 @@
     float: right;
     margin: 16px 0 16px 24px;
   }
+
   
   /* .site-layout-background {
     background: #fff; 

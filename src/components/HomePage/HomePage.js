@@ -7,10 +7,22 @@ import {LockOutlined} from "@ant-design/icons";
 import { Layout, Menu, Breadcrumb } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
+import axios from 'axios';
+import ContentAPI from './Content';
+
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
+// try to call API start =============
+// state = {
+//     videoContent: [],
+// };
 
+// componentDidMount(){
+//     axios.get(`https://jsonplaceholder.typicode.com/users`).then(res => {console.log(res); this.setState({persons: res.data});
+// });
+// }
+// try to call API end =================
 const HomePage =()=>{
     return(
         <>
@@ -57,17 +69,15 @@ const HomePage =()=>{
                         <Breadcrumb.Item>List</Breadcrumb.Item>
                         <Breadcrumb.Item>App</Breadcrumb.Item>
                         </Breadcrumb>
-                        <Content className={`${styles.bgImage} layout`}
-                            
-
+                        <Content className={`${styles.bgImage} layout`}                          
                         // className="site-layout-background"
                         // style={{
                         //     padding: 24,
                         //     margin: 0,
-                        //     minHeight: 280,
-                            
+                        //     minHeight: 280,          
                         // }}
                         >
+                            <ContentAPI />
                         Content
                         </Content>
                     </Layout>
