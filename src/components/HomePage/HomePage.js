@@ -57,19 +57,22 @@ const HomePage =()=>{
                         <Breadcrumb.Item>List</Breadcrumb.Item>
                         <Breadcrumb.Item>App</Breadcrumb.Item>
                         </Breadcrumb>
-                        <Content
-                        className="site-layout-background"
-                        style={{
-                            padding: 24,
-                            margin: 0,
-                            minHeight: 280,
-                        }}
+                        <Content className={`${styles.bgImage} layout`}
+                            
+
+                        // className="site-layout-background"
+                        // style={{
+                        //     padding: 24,
+                        //     margin: 0,
+                        //     minHeight: 280,
+                            
+                        // }}
                         >
                         Content
                         </Content>
                     </Layout>
                 </Layout>
-            </Layout>,
+            </Layout>
         </>
     )
 }
