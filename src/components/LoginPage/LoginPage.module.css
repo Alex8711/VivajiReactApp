@@ -5,23 +5,60 @@
     width: auto;
 }
 
-.centerArea {
+.contentArea {
 
     padding: 100px 50px;
 }
 
 
 .centerRow {
-    height: 100%;
+    min-height: 100vh;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .radioStyle {
+
     display: block;
     height: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(5,238,241);
+    background: radial-gradient(circle, rgba(5,238,241,1) 24%, rgba(38,42,116,1) 100%);
+}
+/*.radioStyle:active, .radioStyle:focus{
+    background-color: white !important;
+}*/
 
+
+.buttonGroup{
+    text-align: center;
+}
+
+.inputRight{
+    width: 100%;
 }
 
 .loginFormButton{
     width: 100%;
+    background: rgb(5,238,241);
+    background: radial-gradient(circle, rgba(5,238,241,1) 24%, rgba(38,42,116,1) 100%);
 }
+
+.leftForm{
+    background-color: #000000;
+    height: 400px;
+    opacity: 0.8;
+    text-align: center;
+}
+.rightForm{
+    background-color: #fff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
