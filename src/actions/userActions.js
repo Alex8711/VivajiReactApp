@@ -14,7 +14,7 @@ export const login = (email, password) => {
                 },
             };
             const { data } = await axios.get(
-                "https://my.vivaji.com/api/v2/123456123450/device/authenticate"
+                "https://my.vivaji.com/api/v2/123456123450/account/client"
             );
 
             dispatch({

@@ -19,6 +19,14 @@ const LoginPage = () => {
     const userLogin = useSelector((state) => state.userLogin);
     const { loading, error, userInfo } = userLogin;
     const history = useHistory();
+
+    useEffect(()=>{
+        if(userInfo)
+        {
+            history.push("/home");
+        }
+    },[userInfo])
+
     const onChange =e=>{
         setConditionForm(e.target.value)
     }
