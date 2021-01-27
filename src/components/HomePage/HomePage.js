@@ -9,6 +9,9 @@ import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/
 
 import axios from 'axios';
 import ContentAPI from './Content';
+import ContentAPI1 from './Content1';
+//import ContentAPI2 from '../../actions/homeActions';
+import ContentAPI2 from './Content2';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -77,7 +80,9 @@ const HomePage =()=>{
                         //     minHeight: 280,          
                         // }}
                         >
-                            <ContentAPI />
+                            {/* <ContentAPI /> */}
+                            {/* <ContentAPI1 /> */}
+                            <ContentAPI2 />
                         Content
                         </Content>
                     </Layout>

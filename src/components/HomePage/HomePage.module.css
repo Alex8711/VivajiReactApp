@@ -5,10 +5,15 @@
 }
 
 .bgImage{
-    background-image: url("./loginbackground.jpg");
-    height: 100vh;
-    width: auto;
+    background-image: url("./loginbackground.jpg") ;
+    background-repeat: repeat;
+    
+    /* height: 100vh;
+    width: auto; */
 }
+
+
+ 
 
 #components-layout-demo-top-side-2 .logo {
     float: left;

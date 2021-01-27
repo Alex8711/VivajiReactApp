@@ -1,5 +1,5 @@
 // just for test . this CODE is not used in the APP
-import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react';
 import axios from 'axios';
  
 function App() {
@@ -24,4 +24,34 @@ function App() {
   );
 }
  
-export default App;
+export default App; */
+//===========================================
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+ 
+// function App() {
+
+//   const [data2, setData] = useState({ data: [] });
+  
+//   useEffect(async () => {
+//     const result = await axios(
+//       'https://my.vivaji.com/api/v2/123456123450/vod/videos',
+//     );
+ 
+//     setData(result.data2);
+//   }, []);
+
+//   console.log(data2);
+
+//   return (
+//     <ul>
+//       {data2.map(item => (
+//         <li key={item.item.id}>
+//           <a href={item.item.cover.portrait}>{item.item.name}</a>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// }
+ 
+// export default App;
