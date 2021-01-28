@@ -15,6 +15,7 @@ const HomePageTest =()=>{
     const [allMovies,setAllMovies] = useState([]);
     const [allTVShows,setAllTVShows] = useState([]);
     const [allMusicVideos,setAllMusicVideos] = useState([]);
+    const [contentCategoryId,setContentCategoryId] = useState();
     useEffect(() => {
         const fetchAllVideos = async ()=>{
             const {data:{data}} = await axios.get("https://my.vivaji.com/api/v2/123456123450/vod/videos");
@@ -29,6 +30,48 @@ const HomePageTest =()=>{
         console.log(allTVShows);
         console.log(allMusicVideos);
     },[])
+const conditionalContent = ()=>{
+    if(contentCategoryId===1)
+    {
+        return (<ul>
+            {allMovies.map(item => (
+                <li key={item.item.id}>
+
+                    <a href={item.item.cover.portrait}>{item.item.name}</a>
+                    <div><img width={"50%"} src={item.item.cover.portrait}></img></div>
+                </li>
+            ))}
+        </ul>)
+
+    } else if(contentCategoryId===2)
+    {
+        return (<ul>
+            {allTVShows.map(item => (
+                <li key={item.item.id}>
+
+                    <a href={item.item.cover.portrait}>{item.item.name}</a>
+                    <div><img width={"50%"} src={item.item.cover.portrait}></img></div>
+                </li>
+            ))}
+        </ul>)
+    }else if(contentCategoryId===3)
+    {
+        return (<ul>
+            {allMusicVideos.map(item => (
+                <li key={item.item.id}>
+
+                    <a href={item.item.cover.portrait}>{item.item.name}</a>
+                    <div><img width={"50%"} src={item.item.cover.portrait}></img></div>
+                </li>
+            ))}
+        </ul>)
+    }else {
+        return(<></>)
+    }
+}
+
+
+
     return(
 
         <>
@@ -36,11 +79,11 @@ const HomePageTest =()=>{
                 allVideos.length<1?(<h2>Loading</h2>):( <Layout className={`layout`}>
                     <Header className="header">
                         <div className="logo" />
-                        <Menu theme="dark" mode="horizontal" >
+                        {/*<Menu theme="dark" mode="horizontal" >
                             <Menu.Item key="1">nav 1</Menu.Item>
                             <Menu.Item key="2">nav 2</Menu.Item>
                             <Menu.Item key="3">nav 3</Menu.Item>
-                        </Menu>
+                        </Menu>*/}
                     </Header>
                     <Layout>
                         <Sider width={200} className="site-layout-background">
@@ -51,9 +94,9 @@ const HomePageTest =()=>{
                                 style={{ height: '100%', borderRight: 0 }}
                             >
                                 <SubMenu key="sub1" icon={<UserOutlined />} title="Categories">
-                                    <Menu.Item key="1">Movies</Menu.Item>
-                                    <Menu.Item key="2">TV Shows</Menu.Item>
-                                    <Menu.Item key="3">Music Videos</Menu.Item>
+                                    <Menu.Item key="1" onClick={()=>{setContentCategoryId(1)}}>Movies</Menu.Item>
+                                    <Menu.Item key="2" onClick={()=>{setContentCategoryId(2)}}>TV Shows</Menu.Item>
+                                    <Menu.Item key="3" onClick={()=>{setContentCategoryId(3)}}>Music Videos</Menu.Item>
 
                                 </SubMenu>
                                 <SubMenu key="sub2" icon={<LaptopOutlined />} title="subnav 2">
@@ -79,9 +122,7 @@ const HomePageTest =()=>{
                                           minHeight: 280,
                                       }}
                             >
-
-
-                                {allVideos.length}
+                                {conditionalContent()}
                             </Content>
                         </Layout>
                     </Layout>
